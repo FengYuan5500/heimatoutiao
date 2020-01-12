@@ -84,6 +84,8 @@ export default {
         this.$store.commit('setUser', data.data)
 
         this.$toast.success('登录成功')
+        // 跳转到首页
+        this.$router.push('/')
       } catch (err) {
         console.log('登录失败', err)
         this.$toast.fail('登录失败，手机号或验证码不正确')

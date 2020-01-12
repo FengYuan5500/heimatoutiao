@@ -16,3 +16,16 @@ export const getSmsCode = mobile => {
 
   })
 }
+export const getUserInfo = () => {
+  return request({
+    method: 'GET',
+    url: '/app/v1_0/user'
+  })
+}
+
+export const getUserById = userId => {
+  return request({
+    method: 'GET',
+    url: `/app/v1_0/users/${userId}`
+  })
+}
